@@ -14,7 +14,7 @@ const PropertyImages = ({ images }) => {
               height='600'
             >
               {({ ref, open }) => (
-                <Image
+                <img
                   ref={ref}
                   onClick={open}
                   src={images[0]}
@@ -46,10 +46,10 @@ const PropertyImages = ({ images }) => {
                     height='600'
                   >
                     {({ ref, open }) => (
-                      <Image
+                      <img
                         ref={ref}
                         onClick={open}
-                        src={image}
+                        src={images}
                         alt=''
                         className='object-cover h-[400px] w-full rounded-xl'
                         width={0}

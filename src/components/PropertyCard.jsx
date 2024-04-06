@@ -9,12 +9,12 @@ import {
 } from 'react-icons/fa';
 
 const PropertyCard = ({ property }) => {
-  console.log(property)
+  // console.log(`images/properties/${property.images[0]}`)
   return (
     <div>
       <div class="rounded-xl shadow-md relative">
         <img
-          src={`images/properties/${property.images[0]}`}
+          src={property.images[0]}
           alt=""
           class="w-full h-auto rounded-t-xl"
         />
