@@ -15,6 +15,7 @@ export const GET = async (request) => {
 
     const total = await Property.countDocuments({});
     const properties = await Property.find({}).skip(skip).limit(pageSize);
+    console.log(properties)
     const result = {
       total,
       properties,

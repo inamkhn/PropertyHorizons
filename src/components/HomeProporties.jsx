@@ -15,12 +15,11 @@ async function fetchProperties() {
 
 const HomeProporties = async () => {
   const data = await fetchProperties();
-  const recentProperties = data.sort(() => Math.random() - Math.random())
+  const recentProperties = data.properties.sort(() => Math.random() - Math.random())
     .slice(0, 3);
-  //  console.log(recentProperties)
   return (
     <div>
-      <div class="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
+      <div className="grid grid-cols-1 md:grid-cols-3 gap-6 p-6">
         {recentProperties.map((property, index) => {
           return <PropertyCard property={property} key={index} />;
         })}

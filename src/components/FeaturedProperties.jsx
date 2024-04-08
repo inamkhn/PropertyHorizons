@@ -4,7 +4,7 @@ async function fetchProperties() {
     try {
       const res = await fetch("http://localhost:3000/api/properties/featured");
       const data = res.json();
-      // console.log(data);
+      // console.log(res);
       if (!res.ok) return console.log("data not found");
       return data;
     } catch (error) {
@@ -16,6 +16,8 @@ const FeaturedProperties = async () => {
   const properties = await fetchProperties({
     showFeatured: true,
   });
+
+
 
   return (
     properties.length > 0 && (
